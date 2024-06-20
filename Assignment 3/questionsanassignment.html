@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">Q1) Create an array of states in india.</p>
+<p class="p1">Remove all the names starting with vowels from the list. Use array.filter.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">const states = ['Karnataka', 'Goa', 'Assam', 'Uttar Pradesh', 'Madhya Pradesh', 'Andhra Pradesh'];</p>
+<p class="p2"><br></p>
+<p class="p1">const statesWithoutVowels = states.filter(state =&gt; !(/[aeiouAEIOU]/.test(state[0])));</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(statesWithoutVowels);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q2) let str = 'I love my India'</p>
+<p class="p1">output expected = 'India my love I'</p>
+<p class="p1">Write code for this.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">let str = 'I love my India';</p>
+<p class="p1">let reversedStr = str.split(' ').reverse().join(' ');</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(reversedStr);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q3) let string = 'INDIA'</p>
+<p class="p1">output = 'INDONESIA'</p>
+<p class="p1">Use array.splice</p>
+<p class="p1">==&gt;</p>
+<p class="p1">let string = 'INDIA';</p>
+<p class="p1">string = string.split('');</p>
+<p class="p1">string.splice(2, 0, 'O', 'N', 'E', 'S', 'I', 'A');</p>
+<p class="p1">string = string.join('');</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(string);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q4) Take any string with minimum 20 characters. Count number of consonant and vowel in the string.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">let string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';</p>
+<p class="p1">let vowels = string.match(/[aeiou]/gi);</p>
+<p class="p1">let consonants = string.match(/[bcdfghjklmnpqrstvwxyz]/gi);</p>
+<p class="p2"><br></p>
+<p class="p1">console.log('Vowels:', vowels ? vowels.length : 0);</p>
+<p class="p1">console.log('Consonants:', consonants ? consonants.length : 0);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q5) Write a function to replace wrong word with correct word in any sentance.</p>
+<p class="p1">Like this - correctfn(string, wrong, correct)</p>
+<p class="p1">Use string.replace in function.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">function correctFn(sentence, wrong, correct) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return sentence.replace(wrong, correct);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(correctFn('I love to lern JavaScript', 'lern', 'learn'));</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q6) inputArr = [1,2,3,9,10,7,5,4,3]</p>
+<p class="p1">answer = [9, 10, 7]</p>
+<p class="p1">User array.filter and return numbers greater than 5.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">let inputArr = [1, 2, 3, 9, 10, 7, 5, 4, 3];</p>
+<p class="p1">let output = inputArr.filter(num =&gt; num &gt; 5);</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(output);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q7)</p>
+<p class="p1">const students = [</p>
+<p class="p1">{ name: "Ram", scores: [80, 70, 60] },</p>
+<p class="p1">{ name: "Mohan", scores: [80, 70, 90] },</p>
+<p class="p1">{ name: "Sai", scores: [60, 70, 80] },</p>
+<p class="p1">{ name: "Hemang", scores: [90, 90, 80, 80] },</p>
+<p class="p1">];</p>
+<p class="p1">Output = [</p>
+<p class="p1">{ name: "Ram", average: 70 },</p>
+<p class="p1">{ name: "Mohan", average: 80 },</p>
+<p class="p1">{ name: "Sai", average: 70 },</p>
+<p class="p1">{ name: "Hemang", average: 85 },</p>
+<p class="p1">];</p>
+<p class="p1">Use array.map and array.reduce.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">const students = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: "Ram", scores: [80, 70, 60] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: "Mohan", scores: [80, 70, 90] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: "Sai", scores: [60, 70, 80] },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ name: "Hemang", scores: [90, 90, 80, 80] },</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">const output = students.map(student =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const average = student.scores.reduce((total, score) =&gt; total + score, 0) / student.scores.length;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return { name: student.name, average: average };</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(output);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q8) Write a function to find repeated sum of digits until there is only a single digit in the number.</p>
+<p class="p1">Example - 456 - 4+5+6 = 15 - 1+5 = 6.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">function repeatedSum(num) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>while (num &gt;= 10) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>num = num.toString().split('').reduce((acc, digit) =&gt; acc + parseInt(digit), 0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return num;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(repeatedSum(456)); // Output: 6</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q9) Write a function to count the number of words in a paragraph.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">function countWords(paragraph) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return paragraph.split(/\s+/).length;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(countWords('Lorem ipsum dolor sit amet, consectetur adipiscing elit')); // Output: 8</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q10) Write a function to reverse a string.</p>
+<p class="p1">Input - Hello</p>
+<p class="p1">Output - olleH</p>
+<p class="p1">==&gt;</p>
+<p class="p1">function reverseString(str) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return str.split('').reverse().join('');</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(reverseString('Hello')); // Output: olleH</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Q11)</p>
+<p class="p1">Input</p>
+<p class="p2"><br></p>
+<p class="p1">[</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student1: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject1: 44,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject2: 56,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject3: 87,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject4: 97,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject5: 37</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student2: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject1: 44,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject2: 56,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject3: 87,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject4: 97,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject5: 37</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student3: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject1: 44,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject2: 56,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject3: 87,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject4: 97,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>subject5: 37</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">]</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1">Output: -</p>
+<p class="p1">[</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student1: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>average: 44</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student2: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>average: 44</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>student3: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>average: 44</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">]</p>
+<p class="p1">Write code to find average as mentioned above. Use array and object methods.</p>
+<p class="p1">==&gt;</p>
+<p class="p1">const students = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ student1: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 } },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ student2: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 } },</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{ student3: { subject1: 44, subject2: 56, subject3: 87, subject4: 97, subject5: 37 } }</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">const output = students.map(student =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const scores = Object.values(student)[0];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sum = Object.values(scores).reduce((acc, score) =&gt; acc + score, 0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const average = sum / Object.keys(scores).length;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return { average: average };</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(output);</p>
+</body>
+</html>
