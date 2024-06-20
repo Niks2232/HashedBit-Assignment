@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.7px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Times New Roman'}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">S Assignment 2</span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">Solve the questions given here -</span></p>
+<p class="p1"><span class="s1">1. Write code to display from 1 to 100 but just even numbers.</span></p>
+<p class="p1"><span class="s1">==&gt;</span></p>
+<p class="p1"><span class="s1">for (let i = 2; i &lt;= 100; i += 2) {</span></p>
+<p class="p1"><span class="s1">    console.log(i);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">2. Write a function to calculate which can add, subtract, multiply and divide two numbers. Use switch inside function.</span></p>
+<p class="p1"><span class="s1">==&gt;</span></p>
+<p class="p1"><span class="s1">function calculate(num1, operator, num2) {</span></p>
+<p class="p1"><span class="s1">    switch (operator) {</span></p>
+<p class="p1"><span class="s1">        case '+':</span></p>
+<p class="p1"><span class="s1">            return num1 + num2;</span></p>
+<p class="p1"><span class="s1">        case '-':</span></p>
+<p class="p1"><span class="s1">            return num1 - num2;</span></p>
+<p class="p1"><span class="s1">        case '*':</span></p>
+<p class="p1"><span class="s1">            return num1 * num2;</span></p>
+<p class="p1"><span class="s1">        case '/':</span></p>
+<p class="p1"><span class="s1">            if (num2 !== 0) {</span></p>
+<p class="p1"><span class="s1">                return num1 / num2;</span></p>
+<p class="p1"><span class="s1">            } else {</span></p>
+<p class="p1"><span class="s1">                return 'Cannot divide by zero!';</span></p>
+<p class="p1"><span class="s1">            }</span></p>
+<p class="p1"><span class="s1">        default:</span></p>
+<p class="p1"><span class="s1">            return 'Invalid operator!';</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">3. You need to write a function findTax() that takes a number type variable as an argument which is the salary of a person. You need to calculate the tax amount on his salary by using the Js switch control flow. The tax rates are given below.</span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">if 500000 &gt;= salary &gt; 0 then 0% tax on the entire salary.</span></p>
+<p class="p1"><span class="s1">If 1000000 &gt;= salary &gt; 500000 then 10% tax on the entire salary.</span></p>
+<p class="p1"><span class="s1">If 1500000 &gt;= salary &gt; 1000000 then 20% tax on the entire salary.</span></p>
+<p class="p1"><span class="s1">If the salary &gt; 1500000 then 30% tax on the entire salary.</span></p>
+<p class="p1"><span class="s1">==&gt;</span></p>
+<p class="p1"><span class="s1">function findTax(salary) {</span></p>
+<p class="p1"><span class="s1">    let taxAmount;</span></p>
+<p class="p1"><span class="s1">    switch (true) {</span></p>
+<p class="p1"><span class="s1">        case (salary &gt; 1500000):</span></p>
+<p class="p1"><span class="s1">            taxAmount = salary * 0.3;</span></p>
+<p class="p1"><span class="s1">            break;</span></p>
+<p class="p1"><span class="s1">        case (salary &gt; 1000000):</span></p>
+<p class="p1"><span class="s1">            taxAmount = salary * 0.2;</span></p>
+<p class="p1"><span class="s1">            break;</span></p>
+<p class="p1"><span class="s1">        case (salary &gt; 500000):</span></p>
+<p class="p1"><span class="s1">            taxAmount = salary * 0.1;</span></p>
+<p class="p1"><span class="s1">            break;</span></p>
+<p class="p1"><span class="s1">        default:</span></p>
+<p class="p1"><span class="s1">            taxAmount = 0;</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p1"><span class="s1">    return taxAmount;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"> </span></p>
+<p class="p1"><span class="s1">4. Write a function to perform this. You are given two numbers n1 and n2. You need to find the sum of the products of their corresponding digits. So, for a number n1= 6 and n2 = 34, you'll do (6*4)+(0*3) = 24.</span></p>
+<p class="p1"><span class="s1">==&gt;</span></p>
+<p class="p1"><span class="s1">function sumOfProducts(n1, n2) {</span></p>
+<p class="p1"><span class="s1">    let sum = 0;</span></p>
+<p class="p1"><span class="s1">    while (n1 &gt; 0 || n2 &gt; 0) {</span></p>
+<p class="p1"><span class="s1">        sum += (n1 % 10) * (n2 % 10);</span></p>
+<p class="p1"><span class="s1">        n1 = Math.floor(n1 / 10);</span></p>
+<p class="p1"><span class="s1">        n2 = Math.floor(n2 / 10);</span></p>
+<p class="p1"><span class="s1">    }</span></p>
+<p class="p1"><span class="s1">    return sum;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+</body>
+</html>
